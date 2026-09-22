@@ -1,14 +1,12 @@
+# Ex.No.3 – Scenario-Based Report Development Utilizing Diverse Prompting Techniques
 
-# Ex.No: 3
-# Date: 03-08-2026
-
-# Scenario-Based Report Development Utilizing Diverse Prompting Techniques
-### (Straightforward Prompts, Tabular Format Prompting, Missing Word Prompting, Preceding Question Prompting)
+### DATE: 3.09.26
+### REGISTER NUMBER: 2122223240185
 
 ---
 
-# Aim
-To write prompts for the following prompt engineering types and evaluate them using a chosen scenario/use case:
+## Aim
+To write prompts for the following prompt types and evaluate them using one evaluation method (rubric-based scoring):
 1. Straightforward Prompts
 2. Tabular Format Prompting
 3. Preceding Question Prompting
@@ -16,115 +14,147 @@ To write prompts for the following prompt engineering types and evaluate them us
 
 ---
 
-# Problem Statement
-Prompt Engineering is the practice of designing effective inputs (prompts) to guide a Large Language Model (LLM) toward producing accurate, relevant, and well-structured outputs. Different prompting styles influence how the model interprets a request and structures its response. This experiment explores four fundamental prompt types — straightforward, tabular, preceding-question, and missing-word — and applies them to a real-world use case to compare their effectiveness in eliciting clear, useful, and well-organized information from an AI model.
+## Explanation
+**Use Case (Unit 5): AI in Healthcare – Patient Education Chatbot**
+
+A hospital wants to use a generative AI chatbot to teach patients about common health topics such as diabetes, vaccines, nutrition and hygiene. The answers must be accurate, simple and well structured. This report tests four prompt types (from Unit 2) on this scenario. It then compares the AI outputs using a rubric.
+
+**Evaluation Method:** Each output is scored from 1 to 5 on four criteria:
+
+| Criterion | Description |
+|-----------|-------------|
+| Accuracy | Is the information factually correct? |
+| Relevance | Does it answer exactly what was asked? |
+| Clarity | Is it easy for a patient to understand? |
+| Structure | Is the format suitable for the prompt type? |
 
 ---
 
-# Use Case (Reference: Unit 5 – Real-World Application of Prompt Engineering)
-**Chosen Use Case: AI-Assisted Learning of Renewable Energy and Environmental Science Concepts**
+## Procedure
 
-This use case involves a student using an AI assistant to learn foundational science concepts — such as electricity types, environmental issues, and biological processes — for exam preparation and general understanding. The four prompt types from Unit 2 are applied to this educational use case to demonstrate how different prompting strategies retrieve and structure the same underlying knowledge domain in different ways.
+### 1. Straightforward Prompts
+A straightforward prompt is a direct, clear instruction with no extra context. It works best for short, factual answers.
 
----
+**Prompt 1:** *"Define photosynthesis in one sentence."*
 
-# Algorithm / Procedure
+> **Output:** Photosynthesis is the process by which green plants use sunlight, water and carbon dioxide to produce glucose and release oxygen.
 
-### Step 1: Straightforward Prompts
-Direct, unambiguous instructions are given to the model, requesting a specific, concise piece of information without additional structure or context.
+**Prompt 2:** *"List three advantages of electric vehicles."*
 
-**Prompt 1:** "Define photosynthesis in one sentence."
-**Prompt 2:** "List three advantages of electric vehicles."
+> **Output:**
+> 1. Zero tailpipe emissions, which reduces air pollution.
+> 2. Lower running and maintenance costs than petrol/diesel vehicles.
+> 3. Quiet operation and instant torque for smooth acceleration.
 
-**Generated Output:**
-| Prompt | AI Response |
-|---|---|
-| Define photosynthesis in one sentence. | Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. |
-| List three advantages of electric vehicles. | 1. Zero tailpipe emissions, reducing air pollution. 2. Lower running costs due to cheaper electricity vs. fuel. 3. Reduced dependency on fossil fuels. |
+**Use-case Prompt:** *"Define Type 2 diabetes in one sentence."*
 
----
-
-### Step 2: Tabular Format Prompting
-The model is explicitly instructed to organize its response into a table, useful for comparisons or structured multi-attribute data.
-
-**Prompt 1:** "Compare and contrast AC and DC current in a table."
-**Prompt 2:** "Provide a table listing five programming languages, their paradigms, and one use case each."
-
-**Generated Output (Prompt 1):**
-
-| Feature | AC (Alternating Current) | DC (Direct Current) |
-|---|---|---|
-| Direction of flow | Reverses periodically | Flows in one direction |
-| Source | Power plants, generators | Batteries, solar cells |
-| Transmission | Efficient over long distances | Efficient over short distances |
-| Common use | Household electricity | Electronic devices, batteries |
-
-**Generated Output (Prompt 2):**
-
-| Language | Paradigm | Use Case |
-|---|---|---|
-| Python | Multi-paradigm (OOP, procedural) | Data science and AI |
-| Java | Object-oriented | Enterprise applications |
-| JavaScript | Event-driven, functional | Web development |
-| Haskell | Functional | Academic/research computing |
-| C | Procedural | Systems/embedded programming |
+> **Output:** Type 2 diabetes is a long-term condition in which the body does not use insulin properly, causing high blood sugar levels.
 
 ---
 
-### Step 3: Preceding Question Prompting
-A guiding question precedes the main instruction, priming the model with context before asking it to elaborate — often producing richer, more explanatory answers.
+### 2. Tabular Format Prompting
+A tabular prompt asks the model to arrange information in rows and columns. This makes comparisons easy to read.
 
-**Prompt 1:** "Why is climate change a global concern? Explain how greenhouse gases contribute to global warming."
-**Prompt 2:** "How do vaccines work? Describe the process of immunization in simple terms."
+**Prompt 1:** *"Compare and contrast AC and DC current in a table."*
 
-**Generated Output:**
+> **Output:**
+>
+> | Feature | AC (Alternating Current) | DC (Direct Current) |
+> |---------|--------------------------|---------------------|
+> | Direction of flow | Changes direction periodically | Flows in one direction |
+> | Frequency | 50 Hz / 60 Hz | 0 Hz |
+> | Source | Generators, power grid | Batteries, solar cells |
+> | Transmission | Efficient over long distances | Losses over long distances (except HVDC) |
+> | Applications | Home appliances, industries | Electronics, mobile phones, EVs |
 
-*Prompt 1 Response:*
-Climate change is a global concern because rising temperatures disrupt ecosystems, agriculture, sea levels, and weather patterns worldwide, affecting every country regardless of its contribution to emissions. Greenhouse gases such as carbon dioxide and methane trap heat in the Earth's atmosphere by absorbing infrared radiation that would otherwise escape into space, causing a gradual warming effect known as the greenhouse effect.
+**Prompt 2:** *"Provide a table listing five programming languages, their paradigms, and one use case each."*
 
-*Prompt 2 Response:*
-Vaccines work by training the immune system to recognize and fight specific pathogens without causing the actual disease. Immunization introduces a weakened, inactivated, or partial form of a pathogen (or genetic instructions to build part of it) into the body, prompting the immune system to produce antibodies. If the real pathogen is encountered later, the immune system can respond quickly and effectively, preventing illness.
+> **Output:**
+>
+> | Language | Paradigm | Use Case |
+> |----------|----------|----------|
+> | Python | Multi-paradigm (OOP, functional, procedural) | Data science and AI |
+> | Java | Object-oriented | Enterprise and Android apps |
+> | C | Procedural | Operating systems, embedded systems |
+> | JavaScript | Event-driven, functional, OOP | Web development |
+> | Haskell | Purely functional | Research and compilers |
 
----
+**Use-case Prompt:** *"Compare Type 1 and Type 2 diabetes in a table."*
 
-### Step 4: Missing Word Prompting
-A sentence with a blank is provided, and the model completes it — testing recall of specific facts within a fixed context.
-
-**Prompt 1:** "The capital of France is ____."
-**Prompt 2:** "In photosynthesis, plants absorb sunlight to produce ____."
-
-**Generated Output:**
-| Prompt | Completed Response |
-|---|---|
-| The capital of France is ____. | The capital of France is **Paris**. |
-| In photosynthesis, plants absorb sunlight to produce ____. | In photosynthesis, plants absorb sunlight to produce **glucose (and oxygen)**. |
-
----
-
-# Evaluation / Comparison
-
-| Prompt Type | Best For | Strength | Limitation |
-|---|---|---|---|
-| Straightforward Prompts | Quick facts, definitions, short lists | Fast, unambiguous, easy to write | Limited structure/depth for complex topics |
-| Tabular Format Prompting | Comparisons, multi-attribute data | Highly readable, organizes complex data clearly | Not suited for narrative/explanatory answers |
-| Preceding Question Prompting | Conceptual understanding, reasoning | Produces richer, context-aware explanations | Slightly longer, less concise responses |
-| Missing Word Prompting | Fact recall, fill-in-the-blank testing | Very precise, good for quizzes/assessment | Not suitable for open-ended or complex queries |
-
----
-
-# Output
-*Include your Screenshots Here (of prompts executed on the AI tool used):*
-- Screenshot 1: Straightforward Prompt outputs
-- Screenshot 2: Tabular Format Prompt outputs
-- Screenshot 3: Preceding Question Prompt outputs
-- Screenshot 4: Missing Word Prompt outputs
+> **Output:**
+>
+> | Feature | Type 1 Diabetes | Type 2 Diabetes |
+> |---------|-----------------|-----------------|
+> | Cause | Autoimmune destruction of insulin cells | Insulin resistance |
+> | Common age of onset | Childhood / young adults | Adults (increasingly in youth) |
+> | Treatment | Insulin injections | Lifestyle changes, oral drugs, sometimes insulin |
+> | Prevention | Not preventable | Often preventable with diet and exercise |
 
 ---
 
-# Conclusion
-The four prompting techniques — Straightforward, Tabular Format, Preceding Question, and Missing Word Prompting — were applied to a common educational use case (renewable energy and environmental science concepts). Each technique demonstrated a distinct strength: straightforward prompts delivered concise facts, tabular prompts organized comparative data clearly, preceding-question prompts elicited deeper conceptual explanations, and missing-word prompts tested precise factual recall. This confirms that selecting the appropriate prompting style based on the nature of the required output significantly improves the quality, clarity, and usefulness of AI-generated responses.
+### 3. Preceding Question Prompting
+A preceding question comes before the main instruction. It sets up the context so the model reasons first and then explains in more depth.
+
+**Prompt 1:** *"Why is climate change a global concern? Explain how greenhouse gases contribute to global warming."*
+
+> **Output:** Climate change is a global concern because it affects every country. It brings rising sea levels, extreme weather, food shortages and loss of biodiversity. Greenhouse gases such as carbon dioxide, methane and nitrous oxide trap heat in the atmosphere. Sunlight warms the Earth's surface, and the Earth radiates this heat back as infrared energy. The gases absorb and re-emit that energy, so less heat escapes to space. Human activities like burning fossil fuels and deforestation increase these gases, which strengthens the effect and raises global temperatures.
+
+**Prompt 2:** *"How do vaccines work? Describe the process of immunization in simple terms."*
+
+> **Output:** Vaccines work by training the immune system to recognise a germ without causing the disease. A vaccine contains a weakened, inactivated or partial form of the germ, or instructions (like mRNA) to make a harmless piece of it. The body responds by making antibodies and memory cells. If the real germ enters later, the immune system recognises it quickly and fights it off before it causes serious illness. This protection is called immunity.
+
+**Use-case Prompt:** *"Why is blood sugar control important for diabetic patients? Explain how diet helps manage diabetes."*
+
+> **Output:** High blood sugar over time damages blood vessels and nerves. This leads to heart disease, kidney failure, vision loss and slow wound healing. Diet helps by controlling how much glucose enters the blood. Eating fibre-rich foods, whole grains and vegetables, and limiting sugar and refined carbohydrates, keeps glucose levels steady. Regular meal timing and portion control also prevent sudden spikes.
 
 ---
 
-# Result
-Thus, the prompts for Straightforward, Tabular Format, Preceding Question, and Missing Word Prompting types were written, executed, and evaluated successfully using the chosen use case, and the report was generated accordingly.
+### 4. Missing Word Prompting
+Missing word (fill-in-the-blank) prompting gives a sentence with a gap for the model to complete. It is useful for testing factual recall and for quizzes.
+
+**Prompt 1:** *"The capital of France is ____."*
+
+> **Output:** Paris
+
+**Prompt 2:** *"In photosynthesis, plants absorb sunlight to produce ____."*
+
+> **Output:** glucose (food) and oxygen
+
+**Use-case Prompt:** *"The hormone that regulates blood sugar levels in the body is ____."*
+
+> **Output:** insulin
+
+---
+
+## Evaluation (Rubric Scores out of 5)
+
+| Prompt Type | Accuracy | Relevance | Clarity | Structure | Total (/20) |
+|-------------|:--------:|:---------:|:-------:|:---------:|:-----------:|
+| Straightforward | 5 | 5 | 5 | 4 | 19 |
+| Tabular Format | 5 | 5 | 5 | 5 | 20 |
+| Preceding Question | 5 | 5 | 4 | 4 | 18 |
+| Missing Word | 5 | 5 | 5 | 3 | 18 |
+
+**Observations:**
+- **Straightforward prompts** gave short, precise answers. They are ideal for quick definitions for patients.
+- **Tabular prompts** gave the most organised output. They are best for comparing conditions or treatments.
+- **Preceding question prompts** gave deeper, reasoned explanations. They are good for educating patients on the *why* behind medical advice.
+- **Missing word prompts** were accurate but gave very little detail. They suit quizzes and knowledge checks more than explanations.
+
+---
+
+## Conclusion
+Each prompt type shapes the AI's response in a different way. For the healthcare patient-education chatbot:
+- Straightforward prompts suit quick facts.
+- Tabular prompts suit comparisons.
+- Preceding question prompts suit detailed explanations.
+- Missing word prompts suit interactive quizzes.
+
+Choosing the right prompting technique for each task improves the accuracy, clarity and usefulness of AI-generated content.
+
+---
+
+## Result
+The various types of prompts were executed successfully and the report was generated.
+
+**Thus, the prompts were executed successfully.**
